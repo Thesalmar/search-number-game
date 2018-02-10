@@ -49,7 +49,7 @@ int game()
 		my_putchar('\n');
 		error_check(answer);
 		step++;
-		check_answer(rand_number, answer, step);
+		check_win = check_answer(rand_number, answer, step);
 		if (check_win == 1)
 			return (1);
 	}
