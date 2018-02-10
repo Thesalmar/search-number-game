@@ -8,6 +8,9 @@
 #ifndef NUMBER_H_
 #define NUMBER_H_
 
+#define MAX 100
+#define MIN 1
+
 void my_putchar(char c);
 void my_putnbr(int nb);
 

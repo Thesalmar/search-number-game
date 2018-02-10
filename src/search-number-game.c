@@ -36,8 +36,7 @@ int check_answer(int rand_number, int answer, int step)
 
 int game()
 {
-	int const max = 100, min = 1;
-	int rand_number = (rand() % (max - min + 1)) + min;
+	int rand_number = (rand() % (MAX - MIN + 1)) + MIN;
 	int answer = 0;
 	int step = 0;
 	int check_win = check_answer(rand_number, answer, step);
