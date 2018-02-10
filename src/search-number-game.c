@@ -27,7 +27,7 @@ int check_answer(int rand_number, int answer, int step)
 		write(1, "Program : -\n", 12);
 	else if (answer < rand_number)
 		write(1, "Program : +\n", 12);
-	else if (rand_number == answer)
+	else
 	{
 		printf("Program: You win in %d steps\n", step);
 		return (1);
