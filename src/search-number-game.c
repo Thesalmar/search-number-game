@@ -8,7 +8,6 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
-#include <time.h>
 #include "number.h"
 
 void error_check(int number)
@@ -35,16 +34,15 @@ int check_answer(int rand_number, int answer, int step)
 	return (0);
 }
 
-int game(int game_check)
+int game()
 {
 	int const max = 100, min = 1;
 	int rand_number = (rand() % (max - min + 1)) + min;
 	int answer = 0;
-	int set = time(NULL);
 	int step = 0;
 	int check_win = check_answer(rand_number, answer, step);
 
-	while (set == time(NULL))
+	while (check_win != 1)
 	{
 		write(1, "Try a number: ", 14);
 		scanf("%d", &answer);
@@ -61,11 +59,6 @@ int game(int game_check)
 
 int main(void)
 {
-	int i = 0;
-	int game_check = game(i);
-
-	while (game_check == 0)
-		game(i);
-	if (game_check == 1)
-		return (0);
+	game();
+	return (0);
 }
